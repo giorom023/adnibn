@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Html DOM events</title>
+</head>
+<body>
+    <h1>კვადრატული განტოლების ამოხსნა</h1>
+    <form id="form">
+        <label for="A">A=</label>
+        <input type="text" name="A" id="A">
+        <br>
+        <label for="B">B=</label>
+        <input type="text" name="B" id="B">
+        <br>
+        <label for="C">C=</label>
+        <input type="text" name="C" id="C">
+    </form>
+    <button onclick="X1Function(); X2Function2();">Click Me</button>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <script>
+        function X1Function() {
+            let A = parseFloat(document.getElementById('A').value);
+            let B = parseFloat(document.getElementById('B').value);
+            let C = parseFloat(document.getElementById('C').value);
+            
+            let D=B**2-4*A*C;
+            let x1=(-B-D**0.5)/(2*A);
+            document.getElementById("demo1").innerHTML =x1;
+        }
+        function X2Function2() {
+            let A = parseFloat(document.getElementById('A').value);
+            let B = parseFloat(document.getElementById('B').value);
+            let C = parseFloat(document.getElementById('C').value);        
+          
+            let D=B**2-4*A*C;
+            let x2=(-B+D**0.5)/(2*A);
+            document.getElementById("demo2").innerHTML =x2;
+            }
+    </script>
+</body>
+</html>
+
